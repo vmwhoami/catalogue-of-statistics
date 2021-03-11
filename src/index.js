@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import App from './components/App';
-
 import store from './redux/store';
-
 import reportWebVitals from './reportWebVitals';
 
-const apiKey = process.env.REACT_APP_API_KEY;
-console.log(apiKey);
+
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
