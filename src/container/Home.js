@@ -13,20 +13,12 @@ const Home = () => {
   const state = useSelector(state => state);
   const { crypto, loading } = state.cryptoReducer;
   console.log(loading);
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <>
-      <Card />
-      <Loading />
-      {crypto.map(coin => {
-        const { asset_id: id, name, price_usd: price } = coin;
-        return (
-          <div key={id}>
-            <p>{id}</p>
-            <h2>{name}</h2>
-            <h3>{price}</h3>
-          </div>
-        );
-      })}
+      {crypto.map(coin => <Card key={coin.asset_id} coin={coin} />)}
     </>
   );
 };
