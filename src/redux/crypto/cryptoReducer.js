@@ -30,8 +30,7 @@ const cryptoReducer = (state = initialState, action) => {
         loading: false,
         crypto: action.payload
           .filter(data => data.type_is_crypto === 1)
-          .filter(data => data.price_usd > 100)
-          .slice(0, 100),
+          .filter(data => data.price_usd > 10000),
       };
     default:
       return state;
