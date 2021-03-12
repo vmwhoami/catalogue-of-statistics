@@ -1,8 +1,9 @@
  
 .container{
-  background-color: royalblue;
-  max-width: 90vw;
+  
+  max-width: 95vw;
   margin: 0 auto;
+  padding: 20px;
 }
 
 

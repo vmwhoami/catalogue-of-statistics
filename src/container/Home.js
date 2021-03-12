@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Loading from '../components/Loading';
 import Card from '../components/Card';
 
 import { fetchCrypto } from '../redux/crypto/cryptoActions';
@@ -15,6 +16,7 @@ const Home = () => {
   return (
     <>
       <Card />
+      <Loading />
       {crypto.map(coin => {
         const { asset_id: id, name, price_usd: price } = coin;
         return (
