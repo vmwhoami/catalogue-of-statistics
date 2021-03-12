@@ -9,13 +9,12 @@ const fetchDatasuccess = data => ({
   payload: { data },
 });
 
-
 const fetchData = () => async dispatch => {
   try {
     const response = await axios.get(url, {
       headers: {
         Authorization: `X-CoinAPI-Key: ${apiKey}`,
-      }
+      },
     });
     return dispatch(fetchDatasuccess(response));
   } catch (e) {
