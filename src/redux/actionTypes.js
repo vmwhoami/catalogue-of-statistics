@@ -1,2 +1,3 @@
 const LOAD_SUCCESS = 'LOAD_SUCCESS';
-export default LOAD_SUCCESS;
+const LOAD_FAILED = 'LOAD_FAILED';
+export { LOAD_SUCCESS, LOAD_FAILED };

@@ -1,22 +1,35 @@
-import React from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { fetchData } from '../actions';
 
-const apiKey = process.env.REACT_APP_API_KEY;
-const url = `https://rest.coinapi.io/v1/exchanges?apikey=${apiKey}`;
-
-const fetchData = async () => {
-  try {
-    const response = await axios.get(url);
-    return response;
-  } catch (e) {
-    return e;
-  }
+const Home = ({ data, fetchData }) => {
+  console.log(data.slice(0, 5));
+  useEffect(() => {
+    fetchData();
+  }, []);
+  return (
+    <>
+      {
+        data.filter(crypto => crypto.type_is_crypto === 1)
+          .map(crypto => <p key={crypto.id_icon}>{crypto.name}</p>)
+      }
+    </>
+  );
 };
 
-fetchData().then(res => console.log(res));
+const mapStateToProps = state => ({
+  data: state.dataReducer.data,
+});
 
-const Home = () => (
-  <h1>Hello from Home</h1>
-);
+const mapDispatchToProps = dispatch => ({
+  fetchData: () => {
+    dispatch(fetchData());
+  },
+});
 
-export default Home;
+Home.propTypes = {
+  data: PropTypes.instanceOf(Array).isRequired,
+  fetchData: PropTypes.func.isRequired,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
