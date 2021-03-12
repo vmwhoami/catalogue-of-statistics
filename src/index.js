@@ -9,9 +9,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <div className="container">
-        <App />
-      </div>
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
