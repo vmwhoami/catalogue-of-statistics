@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import home from '../styles/home.module.css';
 import Loading from '../components/Loading';
 import Card from '../components/Card';
 
@@ -12,14 +13,14 @@ const Home = () => {
   }, []);
   const state = useSelector(state => state);
   const { crypto, loading } = state.cryptoReducer;
-  console.log(loading);
+
   if (loading) {
     return <Loading />;
   }
   return (
-    <>
+    <article className={home.container}>
       {crypto.map(coin => <Card key={coin.asset_id} coin={coin} />)}
-    </>
+    </article>
   );
 };
 

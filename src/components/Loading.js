@@ -1,6 +1,6 @@
 import React from 'react';
 import { WaveLoading } from 'react-loadingg';
 
-const Loading = () => <WaveLoading size={100} color="#000000" sizeUnit="em" />;
+const Loading = () => <WaveLoading size={200} color="#000000" sizeUnit="px" />;
 
 export default Loading;
