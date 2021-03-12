@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 import LOAD_SUCCESS from './actionTypes';
 
 const dataReducer = (state = [], action) => {
