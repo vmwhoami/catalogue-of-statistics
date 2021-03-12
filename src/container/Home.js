@@ -1,30 +1,28 @@
 import React, { useEffect } from 'react';
-import { connect, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-import { fetchCrypto } from '../redux/crypto';
+import { useSelector, useDispatch } from 'react-redux';
 
-const Home = ({ fetchCrypto }) => {
+import { fetchCrypto } from '../redux/crypto/cryptoActions';
 
+const Home = () => {
+  const dispact = useDispatch();
   useEffect(() => {
-    fetchCrypto();
+    dispact(fetchCrypto());
   }, []);
+  const state = useSelector(state => state);
+  const { crypto } = state.cryptoReducer;
   return (
     <>
-      <h1>
-        Hello i guess
-      </h1>
+      {crypto.map(coin => {
+        const { asset_id: id, name, price_usd: price } = coin;
+        return (
+          <div key={id}>
+            <h2>{name}</h2>
+            <h3>{price}</h3>
+          </div>
+        );
+      })}
     </>
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  fetchCrypto: () => {
-    dispatch(fetchCrypto());
-  },
-});
-
-Home.propTypes = {
-
-  fetchCrypto: PropTypes.func.isRequired,
-};
-export default connect(null, mapDispatchToProps)(Home);
+export default Home;
