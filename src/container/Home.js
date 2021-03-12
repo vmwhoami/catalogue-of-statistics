@@ -1,35 +1,30 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchData } from '../actions';
+import { fetchCrypto } from '../redux/crypto';
 
-const Home = ({ data, fetchData }) => {
-  console.log(data.slice(0, 5));
+const Home = ({ fetchCrypto }) => {
+
   useEffect(() => {
-    fetchData();
+    fetchCrypto();
   }, []);
   return (
     <>
-      {
-        data.filter(crypto => crypto.type_is_crypto === 1)
-          .map(crypto => <p key={crypto.id_icon}>{crypto.name}</p>)
-      }
+      <h1>
+        Hello i guess
+      </h1>
     </>
   );
 };
 
-const mapStateToProps = state => ({
-  data: state.dataReducer.data,
-});
-
 const mapDispatchToProps = dispatch => ({
-  fetchData: () => {
-    dispatch(fetchData());
+  fetchCrypto: () => {
+    dispatch(fetchCrypto());
   },
 });
 
 Home.propTypes = {
-  data: PropTypes.instanceOf(Array).isRequired,
-  fetchData: PropTypes.func.isRequired,
+
+  fetchCrypto: PropTypes.func.isRequired,
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(null, mapDispatchToProps)(Home);

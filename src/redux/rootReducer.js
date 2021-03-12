@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import dataReducer from './dataReducer';
+import cryptoReducer from './cryptoReducer';
 
-const rootReducer = combineReducers({ dataReducer });
+const rootReducer = combineReducers({ cryptoReducer });
 
 export default rootReducer;

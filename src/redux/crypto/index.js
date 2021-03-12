@@ -1,5 +1,5 @@
 import axios from 'axios';
-import * as act from '../redux/actionTypes';
+import * as act from './actionTypes';
 
 const url = 'https://rest.coinapi.io/v1/assets?type_is_crypto=1';
 
@@ -12,12 +12,12 @@ axios.defaults.headers.common = {
   'X-CoinAPI-Key': `${process.env.REACT_APP_API_KEY}`,
 };
 
-const fetchDatasuccess = data => ({
+const fetchCryptoSuccess = data => ({
   type: act.LOAD_SUCCESS,
-  payload: { data },
+  payload: data,
 });
 
-const fetchData = () => async dispatch => {
+const fetchCrypto = () => async dispatch => {
   try {
     const response = await axios({
       method: 'GET',
@@ -26,10 +26,10 @@ const fetchData = () => async dispatch => {
       },
       config,
     });
-    return dispatch(fetchDatasuccess(response.data));
+    return dispatch(fetchCryptoSuccess(response.data));
   } catch (e) {
     return e;
   }
 };
 
-export { fetchData, fetchDatasuccess };
+export { fetchCrypto, fetchCryptoSuccess };
