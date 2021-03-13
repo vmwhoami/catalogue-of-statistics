@@ -17,10 +17,8 @@ const initialState = {
     name: 'Bitcoin',
     price_usd: 56499.61458136415,
     type_is_crypto: 1,
-    volume_1day_usd: 1024740766072475.9,
-    volume_1hrs_usd: 26508566078710.17,
-    volume_1mth_usd: 60868529222974776,
   }],
+  asset_id: '',
 };
 
 const cryptoReducer = (state = initialState, action) => {
@@ -30,7 +28,10 @@ const cryptoReducer = (state = initialState, action) => {
         loading: false,
         crypto: action.payload
           .filter(data => data.type_is_crypto === 1)
-          .filter(data => data.price_usd > 10000),
+          .filter(data => data.id_icon)
+          .filter(data => data.price_usd)
+          .filter(data => data.price_usd > 1 && data.price_usd < 60000),
+        asset_id: '',
       };
     default:
       return state;
