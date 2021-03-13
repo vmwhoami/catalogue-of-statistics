@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import card from '../styles/card.module.css';
 
-const Card = ({ coin }) => {
+const Card = ({ coin, createCoinID }) => {
   const {
     asset_id: id, name, price_usd: price,
   } = coin;
@@ -19,8 +19,8 @@ const Card = ({ coin }) => {
     <Link to={`/${id}`}>
       <div
         className={card.card}
-        onClick={() => console.log(price)}
-        onKeyDown={() => console.log(id)}
+        onClick={() => createCoinID(id)}
+        onKeyDown={() => createCoinID(id)}
         aria-hidden="true"
       >
         <img src={`${url + icon}.png`} alt={name + icon} />
@@ -36,11 +36,13 @@ const Card = ({ coin }) => {
 };
 
 Card.propTypes = {
+  createCoinID: PropTypes.func.isRequired,
   coin: PropTypes.shape({
     asset_id: PropTypes.string.isRequired,
     price_usd: PropTypes.number.isRequired,
     id_icon: PropTypes.string,
     name: PropTypes.string,
+
   }).isRequired,
 };
 
