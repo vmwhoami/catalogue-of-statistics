@@ -16,7 +16,6 @@ const infoReducer = (state = init, action) => {
     case ONE_CRYPTO_DATA:
       return {
         ...state,
-
         cryptoInfo: action.payload,
       };
     default:
