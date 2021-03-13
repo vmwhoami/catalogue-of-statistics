@@ -1,10 +1,24 @@
-import GET_ID from './infoActionTypes';
+import { GET_ID, ONE_CRYPTO_DATA } from './infoActionTypes';
 
-const infoReducer = (state = '', action) => {
+const init = {
+  cryptoId: '',
+  cryptoInfo: [],
+};
+
+const infoReducer = (state = init, action) => {
   switch (action.type) {
     case GET_ID:
-      return action.payload;
+      return {
+        ...state,
+        cryptoId: action.payload,
+        cryptoInfo: [],
+      };
+    case ONE_CRYPTO_DATA:
+      return {
+        ...state,
 
+        cryptoInfo: action.payload,
+      };
     default:
       return state;
   }

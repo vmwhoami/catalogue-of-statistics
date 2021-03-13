@@ -4,7 +4,7 @@ import home from '../styles/home.module.css';
 import Loading from '../components/Loading';
 import Card from '../components/Card';
 import { fetchCrypto } from '../redux/crypto/cryptoActions';
-import getCoinId from '../redux/cryptoInfo/infoActions';
+import { getCoinId } from '../redux/cryptoInfo/infoActions';
 
 const Home = () => {
   const dispact = useDispatch();

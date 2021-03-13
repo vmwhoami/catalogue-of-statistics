@@ -32,4 +32,4 @@ const fetchCrypto = () => async dispatch => {
   }
 };
 
-export { fetchCrypto, fetchCryptoSuccess };
+export { fetchCrypto, fetchCryptoSuccess, config };
