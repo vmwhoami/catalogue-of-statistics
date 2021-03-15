@@ -18,7 +18,7 @@ const initialState = {
     price_usd: 56499.61458136415,
     type_is_crypto: 1,
   }],
-  asset_id: '',
+
 };
 
 const cryptoReducer = (state = initialState, action) => {
@@ -30,8 +30,8 @@ const cryptoReducer = (state = initialState, action) => {
           .filter(data => data.type_is_crypto === 1)
           .filter(data => data.id_icon)
           .filter(data => data.price_usd)
-          .filter(data => data.price_usd > 1 && data.price_usd < 60000),
-        asset_id: '',
+          .filter(data => data.price_usd > 1 && data.price_usd < 70000),
+
       };
     default:
       return state;

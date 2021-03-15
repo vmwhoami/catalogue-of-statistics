@@ -16,9 +16,18 @@ const CryptoInfo = () => {
     loading ? <Loading /> : (
       <div className={css.container}>
         {cryptoInfo.map(coinInfo => {
-          const { volume_traded: volume } = coinInfo;
+          const {
+            volume_traded: volume,
+            price_high: high,
+            price_low: low,
+            price_close: close,
+          } = coinInfo;
           return (
-            <h2 key={volume}>hello</h2>
+            <div key={volume} className="container">
+              <h2>{high}</h2>
+              <p>{low}</p>
+              <h3>{close}</h3>
+            </div>
           );
         })}
       </div>
