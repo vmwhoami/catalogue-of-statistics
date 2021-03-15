@@ -1,3 +1,3 @@
-const Errorpage = () => <h2>Error there has been an error</h2>;
+const Errorpage = () => <h2>There has been an error loading your data</h2>;
 
 export default Errorpage;

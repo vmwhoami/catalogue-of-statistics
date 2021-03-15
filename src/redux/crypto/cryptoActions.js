@@ -17,6 +17,14 @@ const fetchCryptoSuccess = data => ({
   payload: data,
 });
 
+const fetchCryptoInfoFailure = () => (
+  {
+    type: act.LOAD_FAILURE,
+    payload: [],
+    error: true,
+  }
+);
+
 const changeFilter = str => ({
   type: act.CHANGE_FILTER,
   payload: str,
@@ -33,10 +41,10 @@ const fetchCrypto = () => async dispatch => {
     });
     return dispatch(fetchCryptoSuccess(response.data));
   } catch (e) {
-    return e;
+    return dispatch(fetchCryptoInfoFailure());
   }
 };
 
 export {
-  fetchCrypto, fetchCryptoSuccess, changeFilter, config,
+  fetchCrypto, fetchCryptoSuccess, changeFilter, fetchCryptoInfoFailure, config,
 };

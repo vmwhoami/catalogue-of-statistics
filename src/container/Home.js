@@ -5,10 +5,13 @@ import Loading from '../components/Loading';
 import Card from '../components/Card';
 import { fetchCrypto } from '../redux/crypto/cryptoActions';
 import { getCoinId } from '../redux/cryptoInfo/infoActions';
+import Errorpage from '../components/Errorpage';
 
 const Home = () => {
   const state = useSelector(state => state.cryptoReducer);
-  const { crypto, loading, filter } = state;
+  const {
+    crypto, loading, filter, error,
+  } = state;
   const dispact = useDispatch();
   useEffect(() => {
     dispact(fetchCrypto());
@@ -16,6 +19,9 @@ const Home = () => {
   const createCoinID = id => {
     dispact(getCoinId(id));
   };
+  if (error) {
+    return <Errorpage />;
+  }
   return (
     loading ? <Loading /> : (
       <article className={home.container}>

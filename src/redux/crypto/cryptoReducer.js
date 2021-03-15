@@ -1,4 +1,4 @@
-import { LOAD_SUCCESS, CHANGE_FILTER } from './actionTypes';
+import { LOAD_SUCCESS, LOAD_FAILURE, CHANGE_FILTER } from './actionTypes';
 
 const initialState = {
   loading: true,
@@ -19,6 +19,7 @@ const initialState = {
     type_is_crypto: 1,
   }],
   filter: 'ALL',
+  error: '',
 };
 
 const cryptoReducer = (state = initialState, action) => {
@@ -34,6 +35,13 @@ const cryptoReducer = (state = initialState, action) => {
         filter: 'ALL',
       };
 
+    case LOAD_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        filter: 'ALL',
+        error: true,
+      };
     case CHANGE_FILTER:
       return {
         ...state,

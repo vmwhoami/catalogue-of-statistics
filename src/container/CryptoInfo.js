@@ -16,7 +16,7 @@ const CryptoInfo = () => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
-  console.log();
+
   return (
     loading ? <Loading /> : (
       <div className={css.container}>
