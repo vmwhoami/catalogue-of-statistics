@@ -1,6 +1,7 @@
 import { GET_ID, ONE_CRYPTO_DATA } from './infoActionTypes';
 
 const init = {
+  loading: true,
   cryptoId: '',
   cryptoInfo: [],
 };
@@ -16,6 +17,7 @@ const infoReducer = (state = init, action) => {
     case ONE_CRYPTO_DATA:
       return {
         ...state,
+        loading: false,
         cryptoInfo: action.payload,
       };
     default:
