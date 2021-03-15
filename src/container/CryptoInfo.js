@@ -27,13 +27,13 @@ const CryptoInfo = () => {
               {
                 label: 'Highest price value',
                 data: cryptoInfo.map(info => info.price_high).reverse(),
-                backgroundColor: 'blue',
+                backgroundColor: '#5788e46e',
               },
 
               {
                 label: 'Lowest price value',
                 data: cryptoInfo.map(info => info.price_low).reverse(),
-                backgroundColor: 'red',
+                backgroundColor: '#2b44726e',
               },
             ],
           }}

@@ -29,10 +29,10 @@
   height: 70%;
   z-index: 1;
 }
-
+ 
 .img {
   object-fit: cover;
-  filter: saturate(0);
+  filter: grayscale(100%);;
 }
 
 .info {
@@ -51,4 +51,5 @@
 
 .long {
   font-size: 25px;
+  text-decoration: none;
 }

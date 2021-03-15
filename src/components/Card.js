@@ -32,6 +32,9 @@ const Card = ({ coin, createCoinID }) => {
           <span className={css.short}>{id}</span>
           <h6 className={css.long}>{name}</h6>
           <h4>
+            Price:
+            {'   '}
+
             {price.toFixed(2)}
             $
           </h4>
