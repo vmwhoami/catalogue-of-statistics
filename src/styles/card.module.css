@@ -29,10 +29,10 @@
   height: 70%;
   z-index: 1;
 }
- 
+
 .img {
   object-fit: cover;
-  filter: grayscale(100%);;
+  filter: grayscale(100%);
 }
 
 .info {
