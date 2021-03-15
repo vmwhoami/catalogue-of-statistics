@@ -1,6 +1,46 @@
-# Getting Started with Create React App
+## Catalogue-Of-Statisctics
+
+In this project, I developed a frontend web application, catalogue of Cryptocurencies using CoinAPI  https://www.coinapi.io/ 
+to collect the data from my React Application.
+
+The application features includes:
+
+Listing all Crypto that is worth more than 1$.
+Listing Crypto that is worth more than 10$.
+Listing Crypto that is worth more than 50$.
+Listing Crypto that is worth more than 100$.
+Display an error if a the connection to the api is not established.
+Dynamic routes for individual coin item and display last 15 days stats.
+
+
+![screenshot](./)
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+Make sure Node.js is running on your local machine
+
+### Setup
+
+```bash
+$ git clone https://github.com/vmwhoami/catalogue-of-statisctics.git
+$ cd catalogue-of-statisctics
+```
+
+Install modules:
+
+```
+npm install
+```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Live Demo
+
+Open [this link](https://bookstoremilestone5.herokuapp.com/) to view it on heroku.
 
 ## Available Scripts
 
@@ -68,3 +108,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Author
+
+**Vitalie Melnic**
+
+- Github: [@vmwhoami](https://github.com/vmwhoami/)
+- Twitter: [@vmwhoami](https://twitter.com/vmwhoami)
+- Linkedin: [vitalie-melnic](https://www.linkedin.com/in/vitalie-melnic/)
+ 
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/vmwhoami/catalogue-of-statisctics/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
