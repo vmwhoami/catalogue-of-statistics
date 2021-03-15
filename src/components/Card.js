@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import card from '../styles/card.module.css';
+import css from '../styles/card.module.css';
 
 const Card = ({ coin, createCoinID }) => {
   const {
@@ -18,18 +18,24 @@ const Card = ({ coin, createCoinID }) => {
   return (
     <Link to={`/${id}`}>
       <div
-        className={card.card}
+        className={css.card}
         onClick={() => createCoinID(id)}
         onKeyDown={() => createCoinID(id)}
         aria-hidden="true"
       >
-        <img src={`${url + icon}.png`} alt={name + icon} />
-        <p>{id}</p>
-        <h2>{name}</h2>
-        <h3>
-          {price.toFixed(2)}
-          $
-        </h3>
+        <div className={css.imgcontainer}>
+          <img className={css.img} src={`${url + icon}.png`} alt={name + icon} />
+        </div>
+        <div className="cardcover" />
+
+        <div className={css.info}>
+          <span className={css.short}>{id}</span>
+          <h6 className={css.long}>{name}</h6>
+          <h4>
+            {price.toFixed(2)}
+            $
+          </h4>
+        </div>
       </div>
     </Link>
   );

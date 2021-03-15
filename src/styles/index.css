@@ -1,11 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -30,4 +29,21 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+.cardcover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.cardcover:nth-child(odd) {
+  background-color: rgb(95, 197, 0);
+}
+
+.cardcover:nth-child(even) {
+  background-color: rgba(69, 0, 197, 0.589);
 }
