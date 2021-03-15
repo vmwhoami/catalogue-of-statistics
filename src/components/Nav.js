@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import PriceFilter from './PriceFilter';
+import PriceFilter from '../container/PriceFilter';
 
 const Nav = () => (
   <nav>
