@@ -5,10 +5,12 @@ import PriceFilter from '../container/PriceFilter';
 
 const Nav = () => (
   <nav className={css.nav}>
-    <PriceFilter />
-    <NavLink to="/">
-      <span>Home</span>
-    </NavLink>
+    <div className={css.container}>
+      <PriceFilter />
+      <NavLink to="/" className={css.link}>
+        <span>Home</span>
+      </NavLink>
+    </div>
   </nav>
 );
 

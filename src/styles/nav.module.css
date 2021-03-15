@@ -1,3 +1,30 @@
 .nav{
-  background-color: blue;
+  height: 80px;
+  background-color: #5788E4;
+}
+.container{
+  width: 90vw;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.link{
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover{
+  color: #EC4C8A;
+}
+
+.select{
+  border: 2px solid white;
+  padding: 5px;
+  color: white;
+   background-color: #5788E4;
 }
