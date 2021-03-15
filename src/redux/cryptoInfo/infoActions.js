@@ -20,7 +20,7 @@ const fetchCryptoInfoSuccess = data => (
   });
 
 const fetchCryptoInfo = id => async dispatch => {
-  const url = `https://rest.coinapi.io/v1/ohlcv/${id}/USD/latest?period_id=1DAY&limit=10`;
+  const url = `https://rest.coinapi.io/v1/ohlcv/${id}/USD/latest?period_id=1DAY&limit=14`;
   try {
     const response = await axios({
       method: 'GET',
