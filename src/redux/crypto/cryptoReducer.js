@@ -1,4 +1,4 @@
-import { LOAD_SUCCESS } from './actionTypes';
+import { LOAD_SUCCESS, CHANGE_FILTER } from './actionTypes';
 
 const initialState = {
   loading: true,
@@ -18,7 +18,7 @@ const initialState = {
     price_usd: 56499.61458136415,
     type_is_crypto: 1,
   }],
-
+  filter: 'ALL',
 };
 
 const cryptoReducer = (state = initialState, action) => {
@@ -31,8 +31,15 @@ const cryptoReducer = (state = initialState, action) => {
           .filter(data => data.id_icon)
           .filter(data => data.price_usd)
           .filter(data => data.price_usd > 1 && data.price_usd < 70000),
-
+        filter: 'ALL',
       };
+
+    case CHANGE_FILTER:
+      return {
+        ...state,
+        filter: action.payload,
+      };
+
     default:
       return state;
   }

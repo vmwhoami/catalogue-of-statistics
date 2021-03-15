@@ -17,6 +17,11 @@ const fetchCryptoSuccess = data => ({
   payload: data,
 });
 
+const changeFilter = str => ({
+  type: act.CHANGE_FILTER,
+  payload: str,
+});
+
 const fetchCrypto = () => async dispatch => {
   try {
     const response = await axios({
@@ -32,4 +37,6 @@ const fetchCrypto = () => async dispatch => {
   }
 };
 
-export { fetchCrypto, fetchCryptoSuccess, config };
+export {
+  fetchCrypto, fetchCryptoSuccess, changeFilter, config,
+};
