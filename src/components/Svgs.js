@@ -18,10 +18,19 @@ const LogoSvg = ({ style }) => (
   </svg>
 );
 
+const VmLogo = ({ style }) => (
+  <svg className={style} id="icon-vmlogo" viewBox="0 0 51 32">
+    <path d="M15.726 6.299l5.030-6.269 30.659 0.023-25.653 31.875-25.652-31.875h8.976l16.676 20.722 10.978-13.64 1.762-2.118h-1.796l-10.944 13.527-4.46-5.554 6.461-7.974-2.018-0.001-5.56 6.838z" />
+  </svg>
+);
+
+VmLogo.propTypes = {
+  style: PropTypes.string.isRequired,
+};
 LogoSvg.propTypes = {
   style: PropTypes.string.isRequired,
 };
 ErroIcon.propTypes = {
   style: PropTypes.string.isRequired,
 };
-export { ErroIcon, LogoSvg };
+export { ErroIcon, LogoSvg, VmLogo };

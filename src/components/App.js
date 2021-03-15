@@ -4,6 +4,7 @@ import Errorpage from './Errorpage';
 import CryptoInfo from '../container/CryptoInfo';
 import app from '../styles/App.module.css';
 import Nav from './Nav';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           </Route>
           <Route path="*" component={Errorpage} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

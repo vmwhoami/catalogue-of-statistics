@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer';
 import Card from '../components/Card';
 
 it('renders Card correctly', () => {
-
   const coin = {
     id: 'BTC',
     name: 'Bitcoin',

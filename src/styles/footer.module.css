@@ -1,0 +1,18 @@
+.footer {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+  fill: white;
+}
