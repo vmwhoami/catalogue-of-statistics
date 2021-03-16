@@ -5,7 +5,7 @@ const About = () => (
   <div className={css.container}>
     <VmLogo style={css.logo} />
     <div className={css.content}>
-      <h2>This is a websited that displays the All the crypto that a worth more than a dollar</h2>
+      <h2>THIS  WEBSITE   DISPLAYS  CRYPTO THAT IS  WORTH MORE THAN ONE DOLLAR</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Nesciunt dolor eius rem voluptates aliquid, itaque labore quae laborum qui
