@@ -29,12 +29,12 @@
 }
 
 .link {
+  cursor: pointer;
   text-transform: uppercase;
   margin: 20px;
   font-size: 20px;
   color: white;
   text-decoration: none;
-  cursor: pointer;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -44,7 +44,7 @@
 
 .select {
   border: 2px solid white;
-  padding: 5px;
+  padding: 10px;
   color: white;
   background-color: #5788e4;
 }

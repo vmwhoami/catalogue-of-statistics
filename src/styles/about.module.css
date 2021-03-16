@@ -1,0 +1,24 @@
+.container {
+  margin: 0 auto;
+  width: 90vw;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 40vw;
+  align-self: end;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content h2 {
+  text-transform: uppercase;
+}
+
+.logo {
+  fill: white;
+  width: 30vw;
+  height: 30vh;
+}

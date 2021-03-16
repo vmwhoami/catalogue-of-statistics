@@ -15,7 +15,6 @@ const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCrypto());
-    // dispatch(changeFilter('ALL'));
   }, []);
   const createCoinID = id => {
     dispatch(getCoinId(id));
