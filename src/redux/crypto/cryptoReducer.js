@@ -26,13 +26,13 @@ const cryptoReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_SUCCESS:
       return {
+        ...state,
         loading: false,
         crypto: action.payload
           .filter(data => data.type_is_crypto === 1)
           .filter(data => data.id_icon)
           .filter(data => data.price_usd)
           .filter(data => data.price_usd > 1 && data.price_usd < 70000),
-        filter: 'ALL',
       };
 
     case LOAD_FAILURE:

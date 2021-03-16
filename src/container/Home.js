@@ -12,12 +12,13 @@ const Home = () => {
   const {
     crypto, loading, filter, error,
   } = state;
-  const dispact = useDispatch();
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispact(fetchCrypto());
+    dispatch(fetchCrypto());
+    // dispatch(changeFilter('ALL'));
   }, []);
   const createCoinID = id => {
-    dispact(getCoinId(id));
+    dispatch(getCoinId(id));
   };
   if (error) {
     return <Errorpage />;
