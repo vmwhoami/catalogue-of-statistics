@@ -10,10 +10,10 @@ Listing Crypto that is worth more than 10$.
 Listing Crypto that is worth more than 50$.
 Listing Crypto that is worth more than 100$.
 Display an error if a the connection to the api is not established.
-Dynamic routes for individual coin item and display last 15 days stats.
+Dynamic routes for individual coin item and display priec stats for the last 15 days .
 
 
-![screenshot](./)
+![screenshot](./catalogue-of-statistics.gif)
 
 ## Getting Started
 
@@ -40,7 +40,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Live Demo
 
-Open [this link](https://bookstoremilestone5.herokuapp.com/) to view it on heroku.
+Open [this link](https://catalogue-of-statisctics.netlify.app/) to view it live.
 
 ## Available Scripts
 
