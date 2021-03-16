@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import home from '../styles/home.module.css';
-import Loading from '../components/Loading';
-import Card from '../components/Card';
-import { fetchCrypto } from '../redux/crypto/cryptoActions';
-import { getCoinId } from '../redux/cryptoInfo/infoActions';
-import Errorpage from '../components/Errorpage';
+import home from '../../styles/home.module.css';
+import Loading from '../Loading';
+import Card from '../Card';
+import { fetchCrypto } from '../../redux/crypto/cryptoActions';
+import { getCoinId } from '../../redux/cryptoInfo/infoActions';
+import Errorpage from '../Errorpage';
 
 const Home = () => {
   const state = useSelector(state => state.cryptoReducer);

@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../container/Home';
+import Home from './container/Home';
 import Errorpage from './Errorpage';
-import CryptoInfo from '../container/CryptoInfo';
+import CryptoInfo from './container/CryptoInfo';
 import app from '../styles/App.module.css';
 import Nav from './Nav';
 import About from './About';

@@ -1,4 +1,3 @@
-// let url = ` https://rest.coinapi.io/v1/ohlcv/BTC/USD/latest?period_id=1DAY&limit=10`
 import axios from 'axios';
 import { GET_ID, ONE_CRYPTO_DATA } from './infoActionTypes';
 import { config } from '../crypto/cryptoActions';

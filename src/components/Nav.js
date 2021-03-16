@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import css from '../styles/nav.module.css';
-import PriceFilter from '../container/PriceFilter';
+import PriceFilter from './container/PriceFilter';
 import { LogoSvg } from './Svgs';
 
 const Nav = () => (

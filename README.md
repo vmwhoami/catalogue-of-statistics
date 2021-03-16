@@ -1,16 +1,16 @@
 ## Catalogue-Of-Statisctics
 
-In this project, I developed a frontend web application, catalogue of Cryptocurencies using CoinAPI  [COINAPI](https://www.coinapi.io/) 
+In this project, I developed a frontend web application, catalogue of Cryptocurrencies using CoinAPI  [COINAPI](https://www.coinapi.io/) 
 to collect the data from my React Application.
 
-The application features includes:
+The application features include:
 
 Listing all Crypto that is worth more than 1$.
 Listing Crypto that is worth more than 10$.
 Listing Crypto that is worth more than 50$.
 Listing Crypto that is worth more than 100$.
-Display an error if a the connection to the api is not established.
-Dynamic routes for individual coin item and display priec stats for the last 15 days .
+Display an error if a connection to the API is not established.
+Dynamic routes for individual coin item and display price stats for the last 15 days.
 
 
 ![screenshot](./catalogue-of-statistics.gif)
@@ -22,7 +22,7 @@ Open [this link](https://catalogue-of-statisctics.netlify.app/) to view it live.
 
 ## Video Presentation
 
-[YouTube link](https://www.youtube.com/watch?v=HnaEbj6Kc_E&ab_channel=VitalieMelnic)
+[YouTube link](https://youtu.be/jjUJHzfOuIA)
 
 ## Getting Started
 
