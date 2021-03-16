@@ -44,6 +44,9 @@ Install modules:
 ```
 npm install
 ```
+```
+npm start
+```
 
 ### Setup your API Key
 
