@@ -1,6 +1,6 @@
 ## Catalogue-Of-Statisctics
 
-In this project, I developed a frontend web application, catalogue of Cryptocurencies using CoinAPI  https://www.coinapi.io/ 
+In this project, I developed a frontend web application, catalogue of Cryptocurencies using CoinAPI  [COINAPI](https://www.coinapi.io/) 
 to collect the data from my React Application.
 
 The application features includes:
@@ -14,6 +14,15 @@ Dynamic routes for individual coin item and display priec stats for the last 15 
 
 
 ![screenshot](./catalogue-of-statistics.gif)
+
+### Live Demo
+
+Open [this link](https://catalogue-of-statisctics.netlify.app/) to view it live.
+
+
+## Video Presentation
+
+[YouTube link](https://www.youtube.com/watch?v=HnaEbj6Kc_E&ab_channel=VitalieMelnic)
 
 ## Getting Started
 
@@ -36,11 +45,13 @@ Install modules:
 npm install
 ```
 
+### Setup your API Key
+
+I used the  [COINAPI](https://www.coinapi.io/). Signup and get your key.
+Create .env file, open it and add REACT_APP_API_KEY=xxxxxxxxxxxxxxxxxxxxx
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Live Demo
-
-Open [this link](https://catalogue-of-statisctics.netlify.app/) to view it live.
 
 ## Available Scripts
 
@@ -131,3 +142,7 @@ Feel free to check the [issues page](https://github.com/vmwhoami/catalogue-of-st
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+ - [Microverse Inc](https://www.microverse.org/)
+ - [COINAPI](https://www.coinapi.io/)
