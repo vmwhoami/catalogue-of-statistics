@@ -1,0 +1,3 @@
+const GET_ID = 'GET_ID';
+const ONE_CRYPTO_DATA = 'ONE_CRYPTO_DATA';
+export { GET_ID, ONE_CRYPTO_DATA };

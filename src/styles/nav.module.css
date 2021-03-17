@@ -1,0 +1,50 @@
+.nav {
+  height: 80px;
+  background-color: #5788e4;
+}
+
+.container {
+  width: 90vw;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  fill: white;
+  width: 70px;
+  height: 70px;
+}
+
+.logoLink {
+  margin-right: auto;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logoLink:hover {
+  transform: scale(1.2);
+}
+
+.link {
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 20px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
+
+.select {
+  border: 2px solid white;
+  padding: 10px;
+  color: white;
+  background-color: #5788e4;
+}
