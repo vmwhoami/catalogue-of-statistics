@@ -44,16 +44,17 @@ Install modules:
 ```
 npm install
 ```
-```
-npm start
-```
-
-### Setup your API Key
+## Setup your API Key
 
 I used the  [COINAPI](https://www.coinapi.io/). Signup and get your key.
 Create .env file, open it and add REACT_APP_API_KEY=xxxxxxxxxxxxxxxxxxxxx
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Run the App:
+```
+npm start
+```
+
 
 
 ## Available Scripts
