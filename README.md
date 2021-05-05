@@ -1,6 +1,6 @@
 ## Catalogue-Of-Statisctics
 
-In this project, I developed a frontend web application, catalogue of Cryptocurrencies using CoinAPI  [COINAPI](https://www.coinapi.io/) 
+In this project, I developed a front-end web application, catalogue of Cryptocurrencies using [CoinAPI](https://www.coinapi.io/) 
 to collect the data from my React Application.
 
 The application features include:
